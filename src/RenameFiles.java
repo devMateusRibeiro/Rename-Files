@@ -1,11 +1,15 @@
 import java.io.File;
 public class RenameFiles {
-    public static void main(String[] args) {
-        //String sourace teste = "C:/Users/conta/Desktop/serie";
-        String[] lista;
-        File file = new File("C:/Users/conta/Desktop/serie");
+    public void Rename(File sourceFolder,File destinationFolder, String tvShowName, String releaseYear, String sXeX, String extension){
+        if (sourceFolder.isDirectory() && destinationFolder.isDirectory()){
+            System.out.println("Renomeando arquivos! Aguarde...");
 
-        lista = file.list();
-        System.out.println(lista[1]);
+            File[] fileList = sourceFolder.listFiles();
+            for(int i = 0; i < fileList.length; i++){
+                fileList[i].renameTo(new File(destinationFolder.getPath() + "\\" +  releaseYear + ".mp4"));
+            }
+        }else{
+            System.out.println("Folder not found!");
+        }
     }
 }
