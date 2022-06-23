@@ -6,8 +6,13 @@ public class RenameFiles {
 
             File[] fileList = sourceFolder.listFiles();
             for(int i = 0; i < fileList.length; i++){
+                System.out.println("Renomeando: " + fileList[i].getName());
+                System.out.println("Para: " + tvShowName + " (" + releaseYear + ") - s" + season + "e" + (i+1) + extension);
                 fileList[i].renameTo(new File(destinationFolder.getPath() + "\\" +  tvShowName + " (" + releaseYear + ") - s" + season + "e" + (i+1) + extension));
             }
+
+            System.out.println("-----------");
+            System.out.println("Finalizado!");
         }else{
             System.out.println("Folder not found!");
         }
