@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.io.File;
 
-public class Constructor {
+public class Main {
     public static void main(String[] args) {
         RenameFiles renameFiles = new RenameFiles();
 
